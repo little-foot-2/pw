@@ -1,0 +1,28 @@
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+@import '~ngx-toastr/toastr';
+
+@import './styles/material/material-theme-colors.scss';
+@import './styles/material/material-override.scss';
+
+@import './styles/bootstrap/bootstrap-override.scss';
+
+@import './styles/primitive/typography-primitive.scss';
+@import './styles/primitive/layout-primitive.scss';
+
+@import './styles/ui-elements/infinite-progress-bar.scss';
+@import './styles/ui-elements/button-infinite-progress.scss';
+@import './styles/ui-elements/footer.scss';
+@import './styles/ui-elements/page.scss';
+@import './styles/ui-elements/form-field.scss';
+@import './styles/ui-elements/info-row.scss';
+
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}

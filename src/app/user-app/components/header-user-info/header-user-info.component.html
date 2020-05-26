@@ -1,0 +1,13 @@
+<span *ngIf="userInfoSetted">
+  {{ balance }}&#36; <span class="in-separator">|</span> {{ username }}
+</span>
+<button
+    mat-mini-fab
+    [color]="userTheme.headerUserButtonColor"
+    [matMenuTriggerFor]="userMenu">
+  <mat-icon>person</mat-icon>
+</button>
+<mat-menu #userMenu="matMenu" xPosition="before">
+  <button mat-menu-item (click)="onProfileClick()">Profile</button>
+  <button mat-menu-item (click)="onLogoutClick()">Logout</button>
+</mat-menu>

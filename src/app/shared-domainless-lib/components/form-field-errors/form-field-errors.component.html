@@ -1,0 +1,5 @@
+<ng-template [ngIf]="getErrorMessages()">
+  <div *ngFor="let item of getErrorMessages()" class="in-error">
+    {{ item }}
+  </div>
+</ng-template>

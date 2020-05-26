@@ -1,0 +1,76 @@
+<app-landing-page
+    [headerMode]="LandingHeaderMode.Default"
+    [footerMode]="LandingFooterMode.Default">
+
+  <div class="in-top-section">
+    <div class="container">
+      <div class="row d-flex align-items-center">
+        <div class="col-sm-6 in-headlines">
+          <h1>Parrot Wings</h1>
+          <h2>Fastest and protected money transfers</h2>
+        </div>
+        <div class="col-sm-6">
+          <form class="in-login" [formGroup]="form" (ngSubmit)="onSubmit()">
+            <app-text-input
+              label="Email"
+              type="text"
+              [matcher]="matcher"
+              [valueFormControl]="form.controls.email">
+            </app-text-input>
+
+            <app-text-input
+              label="Password"
+              type="password"
+              [matcher]="matcher"
+              [valueFormControl]="form.controls.password">
+            </app-text-input>
+
+            <div class="in-login__buttons">
+              <button
+                  class="in-login__login-button"
+                  type="submit"
+                  mat-raised-button
+                  [color]="landingTheme.landingLoginOkButtonColor"
+                  [appButtonInfiniteProgress]="logining">
+                Login
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="in-points">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <div class="in-points__item">
+            <div class="in-points__item__icon">
+              <i class="fas fa-percent"></i>
+            </div>
+            <div class="in-points__item__text">Zero or low fee</div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="in-points__item">
+            <div class="in-points__item__icon">
+              <i class="fas fa-tachometer-alt"></i>
+            </div>
+            <div class="in-points__item__text">Fastest transactions</div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="in-points__item">
+            <div class="in-points__item__icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <div class="in-points__item__text">High protection</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gl-page-spacing-bottom"></div>
+</app-landing-page>

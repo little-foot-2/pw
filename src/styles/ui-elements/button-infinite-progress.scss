@@ -1,0 +1,29 @@
+.gl-button-infinite-progress {
+  &>.gl-progress {
+    display: none;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: 0;
+    margin-right: 0;
+
+    height: 36px;
+    line-height: 36px;
+  }
+
+  &>.mat-button-wrapper {
+    display: inline-block;
+    min-width: 50px;
+  }
+
+  &.gl-button-infinite-progress--progress {
+    &>.gl-progress {
+      display: block;
+    }
+
+    &>.mat-button-wrapper {
+      opacity: 0;
+    }
+  }
+}

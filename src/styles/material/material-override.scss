@@ -1,0 +1,9 @@
+@import './material-theme-colors.scss';
+
+.mat-raised-button.mat-primary[disabled] {
+  background-color: $theme-primary-background;
+}
+
+.mat-raised-button.mat-accent[disabled] {
+  background-color: $theme-accent-background;
+}

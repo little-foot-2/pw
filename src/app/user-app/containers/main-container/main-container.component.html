@@ -1,0 +1,29 @@
+<app-user-page
+    [headerMode]="UserHeaderMode.Default"
+    [footerMode]="UserFooterMode.Default">
+
+  <div class="gl-page-spacing-top"></div>
+
+  <div class="container">
+    <app-loadable-content [loading]="userInfoGetting">
+      <h1 class="mat-h1">Main</h1>
+
+      <div *ngIf="userInfo?.user_info_token">
+        <div class="gl-ver-info-row">
+          <div class="gl-name">Balance</div>
+          <div class="gl-value">{{ userInfo.user_info_token.balance }}&#36;</div>
+        </div>
+
+        <a
+            class="in-make-transfer-button"
+            mat-raised-button
+            [routerLink]="appUrls.user.makeTransfer"
+            [color]="userTheme.mainPage_makeTransferButtonColor">
+          Make money transfer
+        </a>
+      </div>
+    </app-loadable-content>
+  </div>
+
+  <div class="gl-page-spacing-bottom"></div>
+</app-user-page>

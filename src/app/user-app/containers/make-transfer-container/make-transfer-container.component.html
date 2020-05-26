@@ -1,0 +1,21 @@
+<app-user-page
+    [headerMode]="UserHeaderMode.Default"
+    [footerMode]="UserFooterMode.Default">
+
+  <div class="gl-page-spacing-top"></div>
+
+  <div class="container">
+    <h1 class="mat-h1">Make money transfer</h1>
+
+    <app-mat-horizontal-stepper
+        #stepper
+        [steps]="steps"
+        [data]="data"
+        [doneInProcess]="doneInProcess"
+        (dataChanged)="onDataChanged($event)"
+        (doneWithData)="onDoneWithData($event)">
+    </app-mat-horizontal-stepper>
+  </div>
+
+  <div class="gl-page-spacing-bottom"></div>
+</app-user-page>

@@ -1,0 +1,27 @@
+<mat-form-field class="gl-form-field">
+  <mat-label>{{ label }}</mat-label>
+  <input
+      autocomplete="off"
+      autocorrect="off"
+      autocapitalize="off"
+      spellcheck="false"
+      type="text"
+      matInput
+      [matAutocomplete]="auto"
+      [errorStateMatcher]="matcher"
+      [formControl]="valueFormControl">
+  <mat-error>
+    <app-form-field-errors [control]="valueFormControl"></app-form-field-errors>
+  </mat-error>
+</mat-form-field>
+<mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+  <mat-option
+      *ngFor="let item of items | async"
+      (onSelectionChange)="onItemSelect(item)"
+      [value]="item">
+    <ng-container
+        [ngTemplateOutlet]="itemTemplate"
+        [ngTemplateOutletContext]="{ item: item }">
+    </ng-container>
+  </mat-option>
+</mat-autocomplete>

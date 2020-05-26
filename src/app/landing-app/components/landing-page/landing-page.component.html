@@ -1,0 +1,15 @@
+<div [appPage]>
+  <app-page-header-for-landing
+    *ngIf="headerMode !== LandingHeaderMode.None"
+    [appPageHeader]
+    [mode]="headerMode">
+  </app-page-header-for-landing>
+  <div [appPageMain]>
+    <ng-content></ng-content>
+  </div>
+  <app-page-footer-for-landing
+    *ngIf="footerMode !== LandingFooterMode.None"
+    [appPageFooter]
+    [mode]="footerMode">
+  </app-page-footer-for-landing>
+</div>

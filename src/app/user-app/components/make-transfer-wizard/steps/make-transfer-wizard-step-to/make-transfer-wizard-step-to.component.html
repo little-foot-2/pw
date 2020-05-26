@@ -1,0 +1,13 @@
+<ng-template #itemTemplate let-item="item">
+  {{ item.name }}
+</ng-template>
+
+<form [formGroup]="stepControl">
+  <app-autocomplete
+      label="Recipient"
+      [valueFormControl]="stepControl.controls.recipient"
+      [displayFn]="userAutocomplete_displayFn"
+      [itemTemplate]="itemTemplate"
+      [getItemsFunc]="userAutocomplete_getItemsFunc">
+  </app-autocomplete>
+</form>

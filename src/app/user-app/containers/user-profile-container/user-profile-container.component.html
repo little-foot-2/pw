@@ -1,0 +1,41 @@
+<app-user-page
+    [headerMode]="UserHeaderMode.Default"
+    [footerMode]="UserFooterMode.Default">
+
+  <div class="gl-page-spacing-top"></div>
+
+  <div class="container">
+    <app-loadable-content [loading]="userInfoGetting">
+      <h1 class="mat-h1">Profile</h1>
+
+      <div *ngIf="userInfo?.user_info_token" class="row">
+        <div class="col-sm-4">
+          <div class="in-avatar">
+            <i class="fas fa-user"></i>
+          </div>
+        </div>
+
+        <div class="col-sm-8">
+          <div class="gl-ver-info-row">
+            <div class="gl-name">ID</div>
+            <div class="gl-value">{{ userInfo.user_info_token.id }}</div>
+          </div>
+          <div class="gl-ver-info-row">
+            <div class="gl-name">Name</div>
+            <div class="gl-value">{{ userInfo.user_info_token.name }}</div>
+          </div>
+          <div class="gl-ver-info-row">
+            <div class="gl-name">Email</div>
+            <div class="gl-value">{{ userInfo.user_info_token.email }}</div>
+          </div>
+          <div class="gl-ver-info-row">
+            <div class="gl-name">Balance</div>
+            <div class="gl-value">{{ userInfo.user_info_token.balance }}&#36;</div>
+          </div>
+        </div>
+      </div>
+    </app-loadable-content>
+  </div>
+
+  <div class="gl-page-spacing-bottom"></div>
+</app-user-page>

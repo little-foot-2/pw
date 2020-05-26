@@ -1,0 +1,7 @@
+<div *ngIf="!(list && list.length); else content" class="in-empty-list-text">
+  {{ emptyListText || 'List is empty' }}
+</div>
+
+<ng-template #content>
+  <ng-content></ng-content>
+</ng-template>

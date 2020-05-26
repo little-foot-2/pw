@@ -1,0 +1,21 @@
+<h2 mat-dialog-title>
+  <span [ngSwitch]="mode">
+    <span *ngSwitchCase="MessageBoxMode.Standard">
+      <span *ngIf="showTitle">{{ title }}</span>
+    </span>
+    <span *ngSwitchCase="MessageBoxMode.Success">Success</span>
+    <span *ngSwitchCase="MessageBoxMode.Error">Error</span>
+  </span>
+</h2>
+
+<mat-dialog-content *ngIf="showMessage" class="mat-typography">
+  <p>{{ message }}</p>
+</mat-dialog-content>
+
+<mat-dialog-actions align="center">
+  <button *ngIf="showCancelButton" mat-raised-button [color]="messageBoxTheme.cancelButtonColor" mat-dialog-close>Cancel</button>
+  <button *ngIf="showOkButton" mat-raised-button [color]="messageBoxTheme.okButtonColor" [mat-dialog-close]="true" cdkFocusInitial>OK</button>
+
+  <button *ngIf="showNoButton" mat-raised-button [color]="messageBoxTheme.cancelButtonColor" mat-dialog-close>No</button>
+  <button *ngIf="showYesButton" mat-raised-button [color]="messageBoxTheme.okButtonColor" [mat-dialog-close]="true" cdkFocusInitial>Yes</button>
+</mat-dialog-actions>

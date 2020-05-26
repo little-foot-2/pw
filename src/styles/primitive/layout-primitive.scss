@@ -1,0 +1,33 @@
+//
+// Display and text-align
+//
+
+.gl-inline {
+  display: inline;
+}
+
+.gl-inline-block {
+  display: inline-block;
+}
+
+.gl-block {
+  display: block;
+}
+
+.gl-block-center {
+  display: block;
+  text-align: center;
+}
+
+.gl-block-right {
+  display: block;
+  text-align: right;
+}
+
+//
+// Text-align
+//
+
+.gl-center {
+  text-align: center;
+}

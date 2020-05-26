@@ -1,0 +1,17 @@
+<div class="gl-ver-info-row">
+  <div class="gl-name">Your balance</div>
+  <div class="gl-value">{{ balance }}</div>
+</div>
+<div class="gl-ver-info-row">
+  <div class="gl-name">Recipient</div>
+  <div class="gl-value">{{ data.recipient?.name }}</div>
+</div>
+
+<form [formGroup]="stepControl">
+  <app-text-input
+      label="Amount"
+      type="text"
+      mask="0*.00"
+      [valueFormControl]="stepControl.controls.amount">
+  </app-text-input>
+</form>

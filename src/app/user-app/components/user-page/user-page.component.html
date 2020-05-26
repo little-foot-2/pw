@@ -1,0 +1,28 @@
+<div [appPage]>
+  <app-page-header-for-user
+    *ngIf="headerMode !== UserHeaderMode.None"
+    [appPageHeader]
+    [mode]="headerMode">
+  </app-page-header-for-user>
+  <div [appPageMain]>
+    <nav mat-tab-nav-bar>
+      <div class="container">
+        <a
+            *ngFor="let tab of tabs"
+            mat-tab-link
+            [routerLink]="tab.link"
+            routerLinkActive
+            #rla="routerLinkActive"
+            [active]="rla.isActive">
+          {{ tab.label }}
+        </a>
+      </div>
+    </nav>
+    <ng-content></ng-content>
+  </div>
+  <app-page-footer-for-user
+    *ngIf="footerMode !== UserFooterMode.None"
+    [appPageFooter]
+    [mode]="footerMode">
+  </app-page-footer-for-user>
+</div>

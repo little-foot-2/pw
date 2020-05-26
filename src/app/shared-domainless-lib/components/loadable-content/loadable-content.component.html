@@ -1,0 +1,7 @@
+<div *ngIf="loading; else content" class="gl-block-center">
+  <app-infinite-progress-bar></app-infinite-progress-bar>
+</div>
+
+<ng-template #content>
+  <ng-content></ng-content>
+</ng-template>

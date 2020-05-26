@@ -1,0 +1,35 @@
+<app-user-page
+    [headerMode]="UserHeaderMode.Default"
+    [footerMode]="UserFooterMode.Default">
+
+  <div class="gl-page-spacing-top"></div>
+
+  <div class="container">
+    <app-loadable-content [loading]="loading">
+      <h1 class="mat-h1">Your money transfers</h1>
+
+      <app-emptiable-list [list]="transfers" emptyListText="No money transfers">
+        <mat-card *ngFor="let transfer of transfers" class="in-item">
+          <b>
+            {{ -transfer.amount }}&#36;
+          </b>
+          to
+          <b>
+            "{{ transfer.username }}"
+          </b>
+          at
+          <b>
+            "{{ transfer.date }}"
+          </b>
+          &nbsp; | &nbsp;
+          balance {{ transfer.balance }}
+          <div class="in-repeat-button">
+            <button mat-raised-button (click)="onRepeatTransferClick(transfer)">Repeat transfer</button>
+          </div>
+        </mat-card>
+      </app-emptiable-list>
+    </app-loadable-content>
+  </div>
+
+  <div class="gl-page-spacing-bottom"></div>
+</app-user-page>

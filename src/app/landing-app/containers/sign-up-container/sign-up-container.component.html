@@ -1,0 +1,52 @@
+<app-landing-page
+    [headerMode]="LandingHeaderMode.SignUp"
+    [footerMode]="LandingFooterMode.Default">
+
+  <div class="gl-page-spacing-top"></div>
+
+  <div class="container">
+    <h1 class="mat-h1">Sign Up</h1>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <app-text-input
+        label="Username"
+        type="text"
+        [matcher]="matcher"
+        [valueFormControl]="form.controls.username">
+      </app-text-input>
+
+      <app-text-input
+        label="Email"
+        type="text"
+        [matcher]="matcher"
+        [valueFormControl]="form.controls.email">
+      </app-text-input>
+
+      <app-text-input
+        label="Password"
+        type="password"
+        [matcher]="matcher"
+        [valueFormControl]="form.controls.password">
+      </app-text-input>
+
+      <app-text-input
+        label="Confirm password"
+        type="password"
+        [matcher]="matcher"
+        [valueFormControl]="form.controls.confirmPassword">
+      </app-text-input>
+
+      <div class="in-buttons">
+        <button
+            type="submit"
+            mat-raised-button
+            [color]="landingTheme.okButtonColor"
+            [appButtonInfiniteProgress]="signingUp">
+          Sign Up
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <div class="gl-page-spacing-bottom"></div>
+</app-landing-page>

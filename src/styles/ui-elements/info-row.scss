@@ -1,0 +1,28 @@
+.gl-hor-info-row,
+.gl-ver-info-row {
+  margin-bottom: 10px;
+
+  &>.gl-name {
+    font-weight: bold;
+  }
+
+  &>.gl-value {}
+}
+
+.gl-hor-info-row {
+  &>.gl-name,
+  &>.gl-value {
+    display: inline-block;
+  }
+
+  &>.gl-value {
+    margin-left: 20px;
+  }
+}
+
+.gl-ver-info-row {
+  &>.gl-name,
+  &>.gl-value {
+    display: block;
+  }
+}

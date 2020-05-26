@@ -1,0 +1,48 @@
+@import '../../../../styles/material/material-theme-colors.scss';
+@import '../../../../styles/responsive/breakpoints.scss';
+
+.in-top-section {
+  background-color: $theme-primary-background;
+
+  .in-headlines {
+    color: $theme-primary-foreground;
+  }
+
+  form.in-login {
+    padding: 20px 10px;
+    background-color: #ffffff;
+
+    @include media-breakpoint-down(xs) {
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .in-login__buttons {
+      margin-top: 10px;
+
+      .in-login__login-button {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.in-points {
+  .in-points__item {
+    margin-top: 30px;
+    text-align: center;
+
+    .in-points__item__icon {
+      font-size: 100px;
+    }
+
+    .in-points__item__text {
+      font-size: 30px;
+    }
+  }
+}

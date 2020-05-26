@@ -1,0 +1,14 @@
+<mat-toolbar [color]="landingTheme.headerColor">
+  <a mat-button [routerLink]="appUrls.landing.landingPage">
+    <span [appBpsShow]="'<=sm'">PW</span>
+    <span [appBpsShow]="'>sm'">Parrot Wings</span>
+  </a>
+  <div fxFlex="auto"></div>
+  <a
+      *ngIf="mode === LandingHeaderMode.Default"
+      [routerLink]="appUrls.landing.signUp"
+      mat-raised-button
+      [color]="landingTheme.headerSignUpButtonColor">
+    Sign Up
+  </a>
+</mat-toolbar>

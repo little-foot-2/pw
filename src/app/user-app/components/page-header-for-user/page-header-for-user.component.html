@@ -1,0 +1,10 @@
+<mat-toolbar [color]="userTheme.headerColor">
+  <a mat-button [routerLink]="appUrls.user.default">
+    <span [appBpsShow]="'<=sm'">PW</span>
+    <span [appBpsShow]="'>sm'">Parrot Wings</span>
+  </a>
+  <div fxFlex="auto"></div>
+  <div class="in-right-item">
+    <app-header-user-info></app-header-user-info>
+  </div>
+</mat-toolbar>
